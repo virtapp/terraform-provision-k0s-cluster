@@ -10,7 +10,7 @@ This directory provides an example flow with `k0sctl` tool together with Terrafo
 K0S_ARCH=linux-x64 # OR: darwin-arm64, darwin-x64, linux-arm, linux-arm64
 sudo curl -L https://github.com/k0sproject/k0sctl/releases/download/v0.13.0/k0sctl-$K0S_ARCH -o /usr/local/bin/k0sctl
 sudo chmod +x /usr/local/bin/k0sctl
-k0sctl version
+k0sctl version && sudo k0s kubectl get nodes
 
 ## TF Steps
 - `terraform init`
