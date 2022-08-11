@@ -6,6 +6,11 @@ This directory provides an example flow with `k0sctl` tool together with Terrafo
 - You need an account and AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN for AWS
 - Terraform >=v0.14.3 installed
 - You will need the `k0sctl` binary in `PATH` 
+- Install k0sctl
+K0S_ARCH=linux-x64 # OR: darwin-arm64, darwin-x64, linux-arm, linux-arm64
+sudo curl -L https://github.com/k0sproject/k0sctl/releases/download/v0.13.0/k0sctl-$K0S_ARCH -o /usr/local/bin/k0sctl
+sudo chmod +x /usr/local/bin/k0sctl
+k0sctl version
 
 ## TF Steps
 - `terraform init`
