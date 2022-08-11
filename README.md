@@ -14,6 +14,7 @@ This directory provides an example flow with `k0sctl` tool together with Terrafo
 
 This will create a cluster with single controller and worker nodes. 
 If you want to override the default behaviour. Create a `terraform.tfvars` file with the needed details. You can use the provided `terraform.tfvars.example` as a template.
+ssh -i aws_private.pem ubuntu@xx.xx.xx.xx
 
 ## Makefile steps
 
