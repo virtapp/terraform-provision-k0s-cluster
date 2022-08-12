@@ -12,12 +12,19 @@ This directory provides an example flow with `k0sctl` tool together with Terrafo
 
 
     
-    Including the following features :
+    Installation : Option 1
     - Install k0sctl
     K0S_ARCH=linux-x64 # OR: darwin-arm64, darwin-x64, linux-arm, linux-arm64
     sudo curl -L https://github.com/k0sproject/k0sctl/releases/download/v0.13.0/k0sctl-$K0S_ARCH -o /usr/local/bin/k0sctl
     sudo chmod +x /usr/local/bin/k0sctl
     k0sctl version && sudo k0s kubectl get nodes
+    
+    Installation : Option 2
+    
+    k0s kubeconfig admin > ~/.kube/config
+    export KUBECONFIG=~/.kube/config
+    kubectl get nodes
+
 
 ## TF Steps
 - `terraform init`
@@ -27,15 +34,3 @@ This directory provides an example flow with `k0sctl` tool together with Terrafo
 This will create a cluster with single controller and worker nodes. 
 If you want to override the default behaviour. Create a `terraform.tfvars` file with the needed details. You can use the provided `terraform.tfvars.example` as a template.
 
-
-## Makefile steps
-
-In case you don't want to do all those steps you can use the Makefile. 
-
-To deploy a k0s cluster with k0sctl:
-- `make apply` 
-
-Get kubeconfig:
-- `make kubeconfig`
-Teardown:
-- `make destroy`
