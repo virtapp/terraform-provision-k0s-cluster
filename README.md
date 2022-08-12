@@ -1,4 +1,4 @@
-# Bootstrapping a k0s cluster on AWS using Terraform
+# k0s cluster on AWS using Terraform
 
 This directory provides an example flow with `k0sctl` tool together with Terraform using AWS as the cloud provider.
 
@@ -9,9 +9,6 @@ This directory provides an example flow with `k0sctl` tool together with Terrafo
 
 ## Installation
 
-
-
-    
     Installation : Option 1
     - Install k0sctl
     K0S_ARCH=linux-x64 # OR: darwin-arm64, darwin-x64, linux-arm, linux-arm64
